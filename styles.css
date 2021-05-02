@@ -1,0 +1,80 @@
+html{
+    cursor: url(./assets/images/cursor.svg), auto;
+}
+
+.container {
+  max-width: 1342px;
+  margin: auto;
+}
+
+.main-menu {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-menu .main-menu__logo {
+  height: 100%;
+}
+
+.main-menu .main-menu__menu-items {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -16px;
+}
+
+.main-menu .main-menu__menu-items .main-menu__menu-item {
+  margin-left: 64px;
+  padding: 16px;
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 12px;
+}
+
+.main-menu .main-menu__menu-items .main-menu__menu-item:hover {
+  background: #21a36c;
+  color: white;
+}
+
+.main-menu .main-menu__menu-items .main-menu__menu-item:hover span::after {
+  display: none;
+}
+
+.main-menu .main-menu__menu-items .main-menu__menu-item_active span {
+  position: relative;
+}
+
+.main-menu .main-menu__menu-items .main-menu__menu-item_active span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #ffc700;
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+}
+
+.main-header {
+  margin-top: 110px;
+  font-family: Playfair Display;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 85px;
+  text-align: center;
+}
+
+.header-md {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-top: 37px;
+}
