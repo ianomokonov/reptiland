@@ -1,0 +1,148 @@
+html {
+  background: no-repeat url(../assets/images/beared_dragon_bg.png) 0 0 / 100%
+    auto;
+}
+body,
+.container {
+  height: 100vh;
+}
+
+.page-content {
+  position: relative;
+  height: calc(100% - 100px);
+}
+
+.page-content .page-content__page-points {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: calc(100% + 100px);
+  margin-bottom: -20px;
+}
+
+.page-content .page-content__page-point {
+  margin-bottom: 20px;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.page-content .page-content__page-point:after{
+    content: '';
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    display: block;
+    background-color: #BDBCBC;
+}
+
+.page-content .page-content__page-point.page-content__page-point_active{
+    border-color: #21A36C;
+}
+
+.page-content .page-content__page-point.page-content__page-point_active::after{
+    background-color: #000;
+}
+
+.page-content_rowed {
+  display: flex;
+  align-items: center;
+}
+
+.page-content__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-content__col:nth-of-type(2) {
+  width: 412px;
+  align-items: flex-start;
+}
+
+.main-header {
+  margin-top: 0;
+  line-height: 100%;
+  margin-bottom: 32px;
+}
+
+.page-content .page-content__col .page-content__public-name {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.page-content .page-content__col .page-content__public-name:after {
+  content: "";
+  height: 2px;
+  width: 64px;
+  position: absolute;
+  left: calc(100% + 12px);
+  display: block;
+  background-color: #000;
+}
+
+.page-content__col:last-child {
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.page-content__col .page-content__main-img {
+  height: 96%;
+  max-height: 750px;
+}
+
+.page-content__col .page-content__aria {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  /* Голубозеленый */
+
+  color: #21a36c;
+  margin-bottom: 20px;
+}
+
+.page-content .page-content__description {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 143%;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.page-content .page-content__learn-more {
+  border: 1px solid #21a36c;
+  background-color: #fff;
+  box-shadow: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-transform: uppercase;
+  padding: 14px 70px;
+  border-radius: 12px;
+}
+
+.page-content .page-content__learn-more:hover {
+  color: #fff;
+  background-color: #21a36c;
+}

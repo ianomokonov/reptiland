@@ -1,9 +1,16 @@
-html{
-    cursor: url(./assets/images/cursor.svg), auto;
+html, a, button{
+    cursor: url(./assets/images/cursor.svg), auto !important;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
 }
 
 .container {
-  max-width: 1342px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -31,6 +38,8 @@ html{
   font-size: 20px;
   line-height: 24px;
   border-radius: 12px;
+  color: black;
+  text-decoration: none;
 }
 
 .main-menu .main-menu__menu-items .main-menu__menu-item:hover {
@@ -63,7 +72,10 @@ html{
   font-weight: bold;
   font-size: 64px;
   line-height: 85px;
-  text-align: center;
+}
+
+.main-header_centered{
+    text-align: center;
 }
 
 .header-md {
