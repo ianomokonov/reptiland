@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-menu">
+        <img class="main-menu__logo" src="../assets/images/logo.svg" alt="" />
+        <div class="main-menu__menu-items">
+          <a href="/" class="main-menu__menu-item">
+            <span>Главная</span>
+          </a>
+          <a href="/reptiles" class="main-menu__menu-item"
+            ><span>Рептилии</span></a
+          >
+          <a
+            href="/test"
+            class="main-menu__menu-item main-menu__menu-item_active"
+            ><span>Пройти тест</span></a
+          >
+        </div>
+      </div>
+      <div class="page-content">
+        <h3 class="header">
+          Пройди тест и узнай, какая рептилия<br />подойдет тебе больше всего!
+        </h3>
+        <button class="page-content__learn-more">Узнать больше</button>
+
+        <div class="test">
+          <div class="test__question">
+            1. Какой пейзаж вам нравится больше всего?
+          </div>
+          <div class="test__answer">
+            <div class="page-content__page-point"></div>
+            Горы
+          </div>
+          <div class="test__answer">
+            <div class="page-content__page-point"></div>
+            Горы
+          </div>
+          <div class="test__answer">
+            <div class="page-content__page-point"></div>
+            Горы
+          </div>
+          <div class="test__answer">
+            <div class="page-content__page-point"></div>
+            Горы
+          </div>
+          <div class="test__question-points">
+            <div class="test__question-point"></div>
+            <div class="test__question-point test__question-point_active"></div>
+            <div class="test__question-point"></div>
+            <div class="test__question-point"></div>
+            <div class="test__question-point"></div>
+            <div class="test__question-point"></div>
+            <div class="test__question-point"></div>
+          </div>
+        </div>
+        <div class="test__loading">
+          <img src="../assets/images/test_loading.png" />
+        </div>
+        <div class="test__result">
+          Вы АГАМЫШ!
+        </div>
+      </div>
+    </div>
+
+    <script src="../reptiles/data.js" type="module"></script>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>

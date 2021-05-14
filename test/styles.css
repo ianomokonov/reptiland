@@ -1,0 +1,134 @@
+html,
+body {
+  min-height: 100vh;
+}
+.container {
+  height: 100vh;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+}
+
+.test {
+  display: none;
+}
+
+.header {
+  text-align: center;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.page-content_testing .header,
+.page-content_testing .page-content__learn-more,
+.page-content_finished .header,
+.page-content_finished .page-content__learn-more,
+.page-content_loading .header,
+.page-content_loading .page-content__learn-more {
+  display: none;
+}
+
+.page-content_testing .test {
+  display: block;
+}
+
+.test__result{
+    display: none;
+}
+
+.page-content_finished .test__result{
+    display: block;
+}
+
+.page-content_loading .test__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-content_loading .test__loading img {
+  animation-name: rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  height: 600px;
+}
+
+.test__loading:after {
+  content: 'Подбираем рептилию';
+  display: block;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  width: 191px;
+  position: absolute;
+}
+
+.test__question {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  margin-bottom: 60px;
+}
+
+.test__loading {
+  display: none;
+}
+
+.test__answer {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.page-content__page-point {
+  margin-right: 40px;
+  margin-bottom: 0 !important;
+}
+
+.test__answer:hover {
+  color: #21a36c;
+}
+
+.test__answer:hover .page-content__page-point {
+  border-color: #21a36c;
+}
+
+.test__answer:hover .page-content__page-point::after {
+  background-color: black;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

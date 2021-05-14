@@ -1,12 +1,14 @@
-html, a, button{
-    cursor: url(./assets/images/cursor.svg), auto !important;
+html,
+a,
+button {
+  cursor: url(./assets/images/cursor.svg), auto !important;
 }
 
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
+body {
+  margin: 0;
 }
 
 .container {
@@ -56,7 +58,7 @@ body{
 }
 
 .main-menu .main-menu__menu-items .main-menu__menu-item_active span::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 2px;
@@ -74,8 +76,8 @@ body{
   line-height: 85px;
 }
 
-.main-header_centered{
-    text-align: center;
+.main-header_centered {
+  text-align: center;
 }
 
 .header-md {
@@ -89,4 +91,70 @@ body{
   text-align: center;
   letter-spacing: 0.04em;
   margin-top: 37px;
+}
+
+.page-content .page-content__learn-more {
+  border: 1px solid #21a36c;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  box-shadow: none;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-transform: uppercase;
+  padding: 14px 70px;
+  border-radius: 12px;
+}
+
+.page-content .page-content__learn-more:hover {
+  color: #fff;
+  background-color: #21a36c;
+}
+
+.page-content .page-content__page-points {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: calc(100% + 100px);
+  margin-bottom: -20px;
+  max-height: 192px;
+}
+
+.page-content .page-content__page-point {
+  margin-bottom: 20px;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.page-content .page-content__page-point:after {
+  content: '';
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  display: block;
+  background-color: #bdbcbc;
+}
+
+.page-content .page-content__page-point.page-content__page-point_hidden {
+  opacity: 0;
+  position: absolute;
+  /* display: none; */
+}
+
+.page-content .page-content__page-point.page-content__page-point_active {
+  border-color: #21a36c;
+}
+
+.page-content .page-content__page-point.page-content__page-point_active::after {
+  background-color: #000;
 }
