@@ -2,6 +2,10 @@ html,
 body {
   min-height: 100vh;
 }
+
+html{
+  background-image: url(../assets/images/test_bg.png);
+}
 .container {
   height: 100vh;
 }
