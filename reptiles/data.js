@@ -12,6 +12,8 @@ export const reptiles = [
     особенно горло бородатой агамы покрыты острыми чешуйками-колючками, 
     расположенными в виде буквы V – это и есть та самая «борода», украшение, 
     делающее мордочку этой рептилии такой выразительной.`,
+    testNameColor: '#FF8D27',
+    testDescription: `Бородатая агама — экзотическая ящерица, которую чаще всего выбирают в качестве домашнего животного. Нестандартная внешность и спокойный характер не дадут пройти мимо тем, кто ищет себе необычного питомца. Агама в длину достигает 40-60 см. Окраска разнообразна, существуют различные выведенные морфы: можно встретить желтых, красных, белых агам и даже без чешуи. Эта ящерица ведет активную дневную жизнь в засушливых пустынях и полупустынях Австралии.`,
     fullDescription: {
       mainImg: '../assets/images/beared_dragon_main_icon.png',
       areaImg: '../assets/images/beared_dragon_area.png',
@@ -46,39 +48,40 @@ export const reptiles = [
         ],
         types: [
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
+            coloredImg: '../assets/images/food/taracan.svg',
+            maskedImg: '../assets/images/food/monochrome/taracan.svg',
             label: 'Туркменский таракан, Мадакаскарский таракан',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/zoofobas.svg',
+            maskedImg: '../assets/images/food/monochrome/zoofobas.svg',
+            label: 'Зофобас, червь мучной',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/oduvanchik.svg',
+            maskedImg: '../assets/images/food/monochrome/oduvanchik.svg',
+            label: 'Одуванчик, клевер, спорыш и другие сорные травы',
+            
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/brazhnik.svg',
+            maskedImg: '../assets/images/food/monochrome/brazhnik.svg',
+            label: 'Гусеница табачного бражника',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/salat.svg',
+            maskedImg: '../assets/images/food/monochrome/salat.svg',
+            label: 'Все виды салата',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/apple.svg',
+            maskedImg: '../assets/images/food/monochrome/apple.svg',
+            label: 'Сладкие ягоды и фрукты',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/sverchok.svg',
+            maskedImg: '../assets/images/food/monochrome/sverchok.svg',
+            label: 'Сверчок, саранча',
           },
         ],
       },
@@ -88,8 +91,11 @@ export const reptiles = [
     id: 2,
     img: '../assets/images/physignathus_cocincinus.png',
     name: 'Водяная Агама',
+    testNameColor: '#24AE2A',
     latinName: 'Physignathus cocincinus',
     area: 'Юго-Восточная Азия',
+    testDescription: `Водяная агама – красивая и необычная ящерица, которая очень популярна среди заводчиков экзотических животных. Цветовой окрас здоровой водяной агамы яркого мятно-зеленого цвета с белыми боками и голубыми или коричневыми полосами вдоль спины ящерицы. Хвост ящерицы длинный с различными узорами, представленными в виде чередующихся темных и светлых полос.
+    Водяные агамы очень дружелюбны и любопытны от природы. Они очень редко проявляют агрессию по отношению к человеку.`,
     description: `Рептилия обладает дружелюбным нравом, хорошо идет на контакт с человеком, быстро привыкает к владельцу. Важно при первом знакомстве с ними не показывать грубости и агрессии. Животное не любит, когда его резко хватают или издают громкие звуки. На приручение уходит не так много времени. Главное, что нужно рептилии — привыкнуть к вашему запаху и понять, что вы не представляете опасности, настроены подружиться с ней.`,
     mainBackground: '../assets/images/water_dragon_bg.png',
     infoBackground: '../assets/images/water_dragon_info_bg.png',
@@ -128,39 +134,40 @@ export const reptiles = [
         ],
         types: [
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/fish.svg',
+            maskedImg: '../assets/images/food/monochrome/fish.svg',
+            label: 'Мелкая рыба',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/zoofobas.svg',
+            maskedImg: '../assets/images/food/monochrome/zoofobas.svg',
+            label: 'Зофобас, червь мучной',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/mouse.svg',
+            maskedImg: '../assets/images/food/monochrome/mouse.svg',
+            label: 'Мыши',
+            
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/brazhnik.svg',
+            maskedImg: '../assets/images/food/monochrome/brazhnik.svg',
+            label: 'Гусеница табачного бражника',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/salat.svg',
+            maskedImg: '../assets/images/food/monochrome/salat.svg',
+            label: 'Все виды салата',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/apple.svg',
+            maskedImg: '../assets/images/food/monochrome/apple.svg',
+            label: 'Сладкие ягоды и фрукты',
           },
           {
-            coloredImg: '../assets/images/food/taracan.png',
-            maskedImg: '../assets/images/food/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
+            coloredImg: '../assets/images/food/sverchok.svg',
+            maskedImg: '../assets/images/food/monochrome/sverchok.svg',
+            label: 'Сверчок, саранча',
           },
         ],
       },
@@ -172,6 +179,8 @@ export const reptiles = [
     name: 'Красноухая Черепаха',
     latinName: 'TRACHEMYS SCRIPTA ELEGANS',
     area: 'Америка',
+    testNameColor: '#035997',
+    testDescription: `Красноухая черепаха самое популярное домашнее земноводное во всем мире, поэтому она стала самой продаваемой в конце XX века. Этот вид является родным для южной части Соединенных Штатов и северной Мексики. Однако он постепенно стал распространяется в другие регионы, из-за отказа людей содержать ее как домашнее животное и выбрасывания в местные водоемы.`,
     description: `Пресноводная черепашка небольшого размера, из которой получится чудесный питомец. Требует небольшой террариум с пресной водой и сухим местом, на которое может выползти, чтобы погреться. Маленькая черепаха требует ежедневного кормления, взрослую можно кормить раз 2-3 дня. Поскольку эти всеядные зверушки довольно неопрятно едят, их лучше кормить в отдельном загончике.`,
   },
   {
@@ -179,6 +188,8 @@ export const reptiles = [
     img: '../assets/images/CHAMAELEONIDAE.png',
     name: 'Йеменский Хамелеон',
     latinName: 'CHAMAELEONIDAE',
+    testNameColor: '#21A36C',
+    testDescription: `Хамелеоны — удивительные существа. Они имеют уникальное строение глаз, которое позволяет им вращаться вне зависимости друг от друга. Цепкие сдвоенные пальцы обеспечивают крепкий хват, они отлично перемещаются по веткам и лианам, а хвост служит пятой лапой — хамелеон может с легкостью удерживать свой вес на одном хвосте. Их язык превышает длину тела в 1.5 раза, они самые молниеносные охотники, при этом сами по себе хамелеоны довольно медлительны. Это прекрасные питомцы, которые обожают сидеть на руках.`,
     area: 'Африка',
     description: `Хамелеон рекомендован опытным заводчикам рептилий из-за своего трепетного нрава. Они умеют менять цвета, и у них весьма необычный внешний облик. Самыми популярными разновидностями хамелеонов для содержания дома считаются пантерный, йеменский и Джексона. Требуют просторного вольера, питаются мухами, кузнечиками, фруктами и ягодами.`,
   },
@@ -188,6 +199,9 @@ export const reptiles = [
     name: 'Маисовый Полоз',
     latinName: 'PANTHEROPHIS GUTTATUS',
     area: 'Америка',
+    testNameColor: '#423223',
+    testDescription: `Маисовый полоз — это североамериканская неядовитая змея, которая относится к семейству ужеобразных. Рептилия не только не опасна для человека, но и повсеместно используется в роли домашнего животного. Это тихие и красивые питомцы, которые точно не заставят вас скучать. 
+    Что касается отношения к человеку, то эта змея не опасна не только потому, что не выделяет яд, но и по той причине, что она практически никогда не кусается, как и дикие ужи.`,
     description: `Спокойная, неприхотливая, яркая змея, рекомендованная тем, кто решил завести первую в своей жизни ручную рептилию. Нрав у маисового полоза умеренный, змея неядовитая, её размер во взрослом виде — от 1,2 до 1,8 метров. Она питается свежими мышками 1 или 2 раза в неделю и живёт в тёплом террариуме, имитирующем климат родной Южной Америки. Срок жизни — до 23 лет.`,
   },
   {
@@ -196,6 +210,9 @@ export const reptiles = [
     name: 'Питон Королевский',
     latinName: 'PYTHON REGIUS',
     area: 'Африка',
+    testNameColor: '#FF8D27',
+    testDescription: `Королевский питон давно завоевал любовь террариумистов. Это тихие и красивые питомцы, которые точно не заставят вас скучать. Несмотря на свою длину и большой вес, змея подкупает спокойным нравом, удобством содержания и красотой. При правильном уходе такой питомец проживет 20-30 лет. 
+    Самки обычно крупнее самцов. В своем виде питон один из самых маленьких — его длина редко превышает отметку в полтора метра.`,
     description: `Несмотря на название, королевский питон — самый маленький из всех питонов; это выведенный в неволе вид. Взрослая особь достигает в длину 1,2 м, иногда бывает чуть длиннее. Своё второе название «шаровидный» питон получил из-за привычки сворачиваться в клубок от испуга. Питается живыми грызунами раз в 1-2 недели. Неприхотлив, спокойно живёт в тёплом террариуме.`,
   },
   {
@@ -204,6 +221,10 @@ export const reptiles = [
     name: 'Пятнистый Эублефар',
     latinName: 'EUBLEPHARIS MACULARIUS',
     area: 'Юго-Западная Азия',
+    testNameColor: '#FF8D27',
+    testDescription: `Эублефары или леопардовые гекконы — идеальные рептилии как для начинающих, так и для опытных террариумистов. В домашних условиях это послушный и легкий в уходе питомец. Уже более 30 лет эублефаров разводят в США и Европе.
+    <br />Животное небольшое, около 20 см в длину. Тело покрыто мелкой чешуей, на которой тут и там выделяются пупырышки. Окрас имеет много вариантов.
+    <br />Эти гекконы ведут ночной образ жизни.`,
     description: `Яркий геккон до 28 см в длину и весящий до 65 г. Эта ящерка отличается ночным образом жизни, питается кузнечиками и пауками, нетребовательна в уходе и не нуждается в большом вольере. Эублефар неагрессивен, но с ним нужно быть аккуратнее — его хвост легко ломается. При желании можно купить парочку — самца и самку, хотя гекконы прекрасно чувствуют себя в одиночестве.`,
   },
   {
@@ -212,6 +233,9 @@ export const reptiles = [
     name: 'Реснитчатый Бананоед',
     latinName: 'Rhacodactylus ciliatus',
     area: 'Новая Каледония',
+    testNameColor: '#FF8D27',
+    testDescription: `Бананоеды — ручные гекконы, которых можно не кормить живыми насекомыми. В природе питаются насекомыми и перезрелыми фруктами, но в домашних условиях хорошо приучаются к специализированным кормам для рептилий.
+    <br/>Реснитчатый — некрупный геккон до 12-15 см. Самый распространенный вид, который выбирают в качестве домашнего питомца. Имеет примечательные выросты вокруг глаз, за которые и получил свое название «реснитчатый», поскольку они немного напоминают ресницы.`,
     description: `Реснитчатые бананоеды обладатели самой привлекательной внешности. Геккон имеет примечательные выросты вокруг глаз, которые напоминают реснички. Для новичков это идеальная рептилия, он спокойный и ручной, а еще в рационе реснитчатого бананоеда можно полностью исключить живых насекомых, что не мало важно при выборе питомца для многих начинающих террариумистов.`,
   },
 ];
@@ -245,19 +269,19 @@ export const questions = [
     answers: [
       {
         name: 'Всегда довожу начатое до конца',
-        points: 1,
+        points: 15,
       },
       {
         name: 'Быстро теряю интерес к тому, что делаю',
-        points: 2,
+        points: 5,
       },
       {
         name: 'Иногда бываю слишком легкомысленным(ной)',
-        points: 3,
+        points: 0,
       },
       {
         name: 'Стараюсь отвечать за свои поступки',
-        points: 4,
+        points: 10,
       },
     ],
   },
@@ -267,19 +291,19 @@ export const questions = [
     answers: [
       {
         name: 'Учеба занимает у меня большую часть жизни',
-        points: 1,
+        points: 5,
       },
       {
         name: 'У меня много свободного времени',
-        points: 2,
+        points: 15,
       },
       {
         name: 'Учусь половину дня',
-        points: 3,
+        points: 10,
       },
       {
         name: 'Полностью занят(а) учебой ',
-        points: 4,
+        points: 0,
       },
     ],
   },
@@ -289,19 +313,19 @@ export const questions = [
     answers: [
       {
         name: 'Возможность заботиться о ком-то',
-        points: 1,
+        points: 15,
       },
       {
         name: 'Чтобы он добавил разнообразие в мою жизнь',
-        points: 2,
+        points: 10,
       },
       {
         name: 'Возможность отвлечься от забот',
-        points: 3,
+        points: 5,
       },
       {
         name: 'Хочу видеть в нем друга',
-        points: 4,
+        points: 0,
       },
     ],
   },
@@ -311,19 +335,19 @@ export const questions = [
     answers: [
       {
         name: 'Мясо',
-        points: 1,
+        points: 15,
       },
       {
         name: 'Рыба',
-        points: 2,
+        points: 10,
       },
       {
         name: 'Фрукты',
-        points: 3,
+        points: 0,
       },
       {
         name: 'Овощи',
-        points: 4,
+        points: 5,
       },
     ],
   },
@@ -333,19 +357,19 @@ export const questions = [
     answers: [
       {
         name: 'Гроза',
-        points: 1,
+        points: 15,
       },
       {
         name: 'Ливень',
-        points: 2,
+        points: 10,
       },
       {
         name: 'Солнечный и теплый день',
-        points: 3,
+        points: 0,
       },
       {
         name: 'Погода с легким ветром',
-        points: 4,
+        points: 5,
       },
     ],
   },
@@ -355,19 +379,19 @@ export const questions = [
     answers: [
       {
         name: 'Совсем не боюсь',
-        points: 1,
+        points: 15,
       },
       {
         name: 'Очень боюсь',
-        points: 2,
+        points: 0,
       },
       {
         name: 'Боюсь только грызунов',
-        points: 3,
+        points: 5,
       },
       {
         name: 'Боюсь только насекомых',
-        points: 4,
+        points: 10,
       },
     ],
   },
@@ -377,11 +401,11 @@ export const questions = [
     answers: [
       {
         name: 'Да',
-        points: 1,
+        points: 0,
       },
       {
         name: 'Нет',
-        points: 2,
+        points: 5,
       },
     ],
   },
@@ -391,19 +415,19 @@ export const questions = [
     answers: [
       {
         name: 'Все свободное время',
-        points: 1,
+        points: 15,
       },
       {
         name: '1-2 часа, не больше',
-        points: 2,
+        points: 5,
       },
       {
         name: 'Очень мало',
-        points: 3,
+        points: 0,
       },
       {
         name: 'Несколько часов в день',
-        points: 4,
+        points: 10,
       },
     ],
   },
@@ -413,19 +437,19 @@ export const questions = [
     answers: [
       {
         name: 'Сижу в интернете',
-        points: 1,
+        points: 0,
       },
       {
         name: 'Читаю',
-        points: 2,
+        points: 15,
       },
       {
         name: 'Гуляю на природе',
-        points: 3,
+        points: 5,
       },
       {
         name: 'Общаюсь с близкими и друзьями',
-        points: 4,
+        points: 10,
       },
     ],
   },

@@ -4,6 +4,24 @@ const reptile = reptiles.find(
   (r) => r.id == new URL(document.location).searchParams.get('id')
 );
 
+const onFoodEnter = ({ target }) => {
+  const colored = target.closest('[data-colored]');
+  if (!colored) {
+    return;
+  }
+
+  colored.src = colored.dataset.colored;
+};
+
+const onFoodLeave = ({ target }) => {
+  const masked = target.closest('[data-masked]');
+  if (!masked) {
+    return;
+  }
+
+  masked.src = masked.dataset.masked;
+};
+
 if (reptile) {
   document.body.style.setProperty(
     'background-image',
@@ -13,6 +31,12 @@ if (reptile) {
 
   setData(reptile);
 }
+
+document
+  .querySelector('.fourth-section__food')
+  .addEventListener('mouseenter', ({ target }) => {
+    console.log(target);
+  });
 
 function setData(reptile) {
   if (!reptile.fullDescription) {
@@ -186,11 +210,16 @@ function setFourthSection(reptile) {
     </div>
   </div>
         `;
+
+  section.querySelectorAll('[data-colored]').forEach((elem) => {
+    elem.addEventListener('mouseenter', onFoodEnter);
+    elem.addEventListener('mouseleave', onFoodLeave);
+  });
 }
 
 function getDifficulty(difficulty) {
   let result = '';
-console.log(difficulty);
+  console.log(difficulty);
   for (let i = 0; i < 5; i++) {
     result += `<div class="third-section_dificulty-point ${
       i <= difficulty - 1 ? 'third-section_dificulty-point_filled' : ''
@@ -215,6 +244,10 @@ function getFood(types) {
     .map(
       (t) => `<img
     src="${t.maskedImg}"
+    data-colored="${t.coloredImg}"
+    data-masked="${t.maskedImg}"
+    data-label="${t.label}"
+    title="${t.label}"
     class="fourth-section__food-image"
   />`
     )

@@ -285,6 +285,7 @@ html {
 
 .fourth-section__food-image {
   position: absolute;
+  height: 160px;
 }
 
 .fourth-section__food-main-image {

@@ -1,4 +1,4 @@
-import { questions } from '../reptiles/data.js';
+import { questions, reptiles } from '../reptiles/data.js';
 
 document
   .querySelector('.page-content__learn-more')
@@ -26,6 +26,7 @@ const onAnswer = (event) => {
 };
 
 const test = document.querySelector('.test');
+const testResult = document.querySelector('.test__result');
 test.addEventListener('click', onAnswer);
 
 function startTest() {
@@ -72,4 +73,59 @@ function getResult(points) {
     field.classList.remove('page-content_loading');
     field.classList.add('page-content_finished');
   }, 3000);
+
+  const reptile = getReptile(points);
+
+  testResult.innerHTML = `
+  <h3 class="page-content__result-header">Больше всего вам подходит</h3>
+  <h2 class="page-content__result-name" style="color:${reptile.testNameColor}">${reptile.name}</h2>
+  <div class="page-content__result-content">
+    <img
+      src="${reptile.img}"
+      alt=""
+      class="page-content__img"
+    />
+    <div class="page-content__description">
+      <span
+        >${reptile.testDescription}</span
+      >
+      <small
+        >Если вам понравился кто-то из питомцев,вы можете заказать
+        сувенирную продукцию с его изображением</small
+      >
+      <button class="page-content__learn-more">Заказать</button>
+    </div>
+  </div>
+`;
+}
+
+function getReptile(points) {
+  let resultId = 0;
+
+  if (points >= 0 && points <= 15) {
+    resultId = 7;
+  }
+  if (points >= 20 && points <= 35) {
+    resultId = 8;
+  }
+  if (points >= 40 && points <= 55) {
+    resultId = 1;
+  }
+  if (points >= 60 && points <= 75) {
+    resultId = 3;
+  }
+  if (points >= 80 && points <= 95) {
+    resultId = 5;
+  }
+  if (points >= 100 && points <= 115) {
+    resultId = 4;
+  }
+  if (points >= 120 && points <= 135) {
+    resultId = 6;
+  }
+  if (points >= 140 && points <= 155) {
+    resultId = 2;
+  }
+
+  return reptiles.find((r) => r.id == resultId);
 }
