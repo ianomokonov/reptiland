@@ -1,7 +1,38 @@
 import { reptiles } from '../reptiles/data.js';
 
+let activeIndex = 0;
+let scrolling = false;
 const reptile = reptiles.find(
   (r) => r.id == new URL(document.location).searchParams.get('id')
+);
+
+document.addEventListener(
+  'wheel',
+  (e) => {
+    e.preventDefault();
+    if (scrolling) {
+      return;
+    }
+    scrolling = true;
+    setTimeout(() => {
+      scrolling = false;
+    }, 500);
+    let shouldScroll = false;
+    if (e.deltaY < 0 && activeIndex > 0) {
+      activeIndex -= 1;
+      shouldScroll = true;
+    }
+
+    if (e.deltaY > 0 && activeIndex < 3) {
+      activeIndex += 1;
+      shouldScroll = true;
+    }
+
+    if (shouldScroll) {
+      document.querySelector(`.section-${activeIndex}`).scrollIntoView();
+    }
+  },
+  { passive: false }
 );
 
 const onFoodEnter = ({ target }) => {
