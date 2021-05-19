@@ -1,3 +1,5 @@
+@import './adaptive.css';
+
 html,
 a,
 button {
@@ -16,6 +18,10 @@ body {
   margin: auto;
 }
 
+.main-menu__burger {
+  display: none;
+}
+
 .main-menu {
   height: 100px;
   display: flex;
@@ -25,6 +31,10 @@ body {
 
 .main-menu .main-menu__logo {
   height: 100%;
+}
+
+.main-menu__logo_sm {
+  display: none;
 }
 
 .main-menu .main-menu__menu-items {
