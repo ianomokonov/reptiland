@@ -1,10 +1,15 @@
+@import './adaptive.css';
+
 html {
-  background: no-repeat url(../assets/images/beared_dragon_bg.png) 0 0 / 100%
+  background: repeat-y url(../assets/images/beared_dragon_bg.png) 0 0 / 100%
     auto;
 }
 body,
 .container {
   height: 100vh;
+}
+.container {
+  max-width: 70%;
 }
 
 body {
@@ -54,6 +59,7 @@ body {
 .page-content__col:nth-of-type(1) {
   width: 412px;
   align-items: flex-start;
+  min-width: 350px;
 }
 
 .main-header {
@@ -91,7 +97,7 @@ body {
 }
 
 .page-content__col .page-content__main-img {
-  height: 96%;
+  width: 100%;
   max-height: 750px;
 }
 

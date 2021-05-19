@@ -1,0 +1,30 @@
+@media (max-width: 1200px) {
+  html {
+    background-image: url(../assets/images/tablet_bg.png) !important;
+  }
+  .page-content .page-content__page-points {
+    right: unset;
+    left: calc(100% + 12px);
+  }
+
+  .page-content_rowed {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .page-content__col .page-content__main-img {
+    max-width: 716px;
+    max-height: 600px !important;
+    align-self: center;
+  }
+
+  .page-content__col:nth-of-type(1) {
+    width: 500px !important;
+    max-width: 500px !important;
+  }
+  .page-content__col:last-child {
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
