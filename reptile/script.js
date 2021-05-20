@@ -84,7 +84,7 @@ function setFirstSection(reptile) {
   section.innerHTML = `
     <h1 class="main-header main-header_centered">${reptile.name}</h1>
     <div class="row">
-      <div class="col-7 first-section__image">
+      <div class="col-xl-7 col-11 first-section__image">
         <img src="${reptile.fullDescription.mainImg}" alt="" />
         <div class="first-section__length">
           <div style="background-color: ${reptile.fullDescription.tailColor}" class="first-section__tail-lenght">
@@ -97,7 +97,7 @@ function setFirstSection(reptile) {
           </div>
         </div>
       </div>
-      <div class="col-5 first-section__info">
+      <div class="col-xl-5 col-11 first-section__info">
         <div class="first-section__info-item">
           <img
             src="../assets/images/forest.png"
@@ -135,14 +135,14 @@ function setSecondSection(reptile) {
   const section = document.querySelector('.second-section');
   section.innerHTML = `
     <div class="row">
-    <div class="col-6 d-flex align-items-center">
+    <div class="col-xl-6 col-11 d-flex align-items-center justify-content-center">
       <img
         src="${reptile.fullDescription.areaImg}"
         alt=""
         class="second-section__img"
       />
     </div>
-    <div class="col-6 d-flex flex-column justify-content-center">
+    <div class="col-xl-6 col-11 d-flex flex-column justify-content-center">
       <div class="second-section__header">Место обитания</div>
       <p class="second-section__description">
         ${reptile.fullDescription.areaDescription}
@@ -157,7 +157,7 @@ function setThirdSection(reptile) {
   section.innerHTML = `
   <div class="third-section__header">Содержание</div>
   <div class="row">
-    <div class="col-6 third-section__info">
+    <div class="col-xl-6 col-sm-9 col-12 third-section__info">
       <div class="third-section__info-item">
         <img src="../assets/images/terrarium.png" alt="" />
         <div class="line"></div>
@@ -202,7 +202,7 @@ function setThirdSection(reptile) {
       </div>
     </div>
     <div
-      class="col-6 third-section_dificulty ${getDifficultyColor(
+      class="col-xl-6 col-12 third-section_dificulty ${getDifficultyColor(
         reptile.fullDescription.difficulty
       )}"
     >
