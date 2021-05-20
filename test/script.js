@@ -96,7 +96,17 @@ function getResult(points) {
       <button class="page-content__learn-more">Заказать</button>
     </div>
   </div>
-`;
+  <div class="page-content__result-content d-sm-flex">
+    <div class="w-50"></div>
+    <div class="page-content__description pt-0">
+      <small
+        >Если вам понравился кто-то из питомцев,вы можете заказать
+        сувенирную продукцию с его изображением</small
+      >
+      <button class="page-content__learn-more">Заказать</button>
+    </div>
+  </div>
+  `;
 }
 
 function getReptile(points) {

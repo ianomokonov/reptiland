@@ -1,9 +1,11 @@
+@import './adaptive.css';
+
 html,
 body {
   min-height: 100vh;
 }
 
-html{
+html {
   background-image: url(../assets/images/test_bg.png);
   background-size: cover;
 }
@@ -43,8 +45,21 @@ html{
   display: none;
 }
 
+.page-content_testing {
+  justify-content: flex-start;
+  padding-top: 324px;
+}
+
 .page-content_testing .test {
   display: block;
+}
+
+.w-50 {
+  min-width: 50% !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
 }
 
 .test__result {
@@ -82,7 +97,9 @@ html{
   width: 191px;
   position: absolute;
 }
-
+.d-sm-flex {
+  display: none !important;
+}
 .test__question {
   font-family: Inter;
   font-style: normal;
@@ -159,7 +176,7 @@ html{
   align-items: flex-start;
 }
 
-.page-content__img{
+.page-content__img {
   max-width: 50%;
 }
 
