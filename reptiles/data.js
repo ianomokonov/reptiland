@@ -46,44 +46,7 @@ export const reptiles = [
           `Лучше не ограничиваться только насекомыми и периодически вводить в рацион растительную пищу. Особенно рептилии любят сочные фрукты и ягоды.`,
           `Насекомых посыпают специальными витаминами или кальцием.<br />  Корм нужно давать только утром и днем. В вечернее время кормление <b>не рекомендуется</b>.`,
         ],
-        types: [
-          {
-            coloredImg: '../assets/images/food/taracan.svg',
-            maskedImg: '../assets/images/food/monochrome/taracan.svg',
-            label: 'Туркменский таракан, Мадакаскарский таракан',
-          },
-          {
-            coloredImg: '../assets/images/food/zoofobas.svg',
-            maskedImg: '../assets/images/food/monochrome/zoofobas.svg',
-            label: 'Зофобас, червь мучной',
-          },
-          {
-            coloredImg: '../assets/images/food/oduvanchik.svg',
-            maskedImg: '../assets/images/food/monochrome/oduvanchik.svg',
-            label: 'Одуванчик, клевер, спорыш и другие сорные травы',
-            
-          },
-          {
-            coloredImg: '../assets/images/food/brazhnik.svg',
-            maskedImg: '../assets/images/food/monochrome/brazhnik.svg',
-            label: 'Гусеница табачного бражника',
-          },
-          {
-            coloredImg: '../assets/images/food/salat.svg',
-            maskedImg: '../assets/images/food/monochrome/salat.svg',
-            label: 'Все виды салата',
-          },
-          {
-            coloredImg: '../assets/images/food/apple.svg',
-            maskedImg: '../assets/images/food/monochrome/apple.svg',
-            label: 'Сладкие ягоды и фрукты',
-          },
-          {
-            coloredImg: '../assets/images/food/sverchok.svg',
-            maskedImg: '../assets/images/food/monochrome/sverchok.svg',
-            label: 'Сверчок, саранча',
-          },
-        ],
+        types: getFoodTypes([1, 2, 3, 4, 5, 6, 7]),
       },
     },
   },
@@ -132,44 +95,7 @@ export const reptiles = [
           `Среди любимых лакомств агам — сверчки, саранча. Не стоит забывать и о добавления в рацион натуральных витаминов. Они содержаться в зелени, овощах.`,
           `У каждой особи есть свои вкусовые предпочтения — кто-то  ест салат, других не оторвешь от клубники. Растительную пищу они едят не так часто, как белковую.`,
         ],
-        types: [
-          {
-            coloredImg: '../assets/images/food/fish.svg',
-            maskedImg: '../assets/images/food/monochrome/fish.svg',
-            label: 'Мелкая рыба',
-          },
-          {
-            coloredImg: '../assets/images/food/zoofobas.svg',
-            maskedImg: '../assets/images/food/monochrome/zoofobas.svg',
-            label: 'Зофобас, червь мучной',
-          },
-          {
-            coloredImg: '../assets/images/food/mouse.svg',
-            maskedImg: '../assets/images/food/monochrome/mouse.svg',
-            label: 'Мыши',
-            
-          },
-          {
-            coloredImg: '../assets/images/food/brazhnik.svg',
-            maskedImg: '../assets/images/food/monochrome/brazhnik.svg',
-            label: 'Гусеница табачного бражника',
-          },
-          {
-            coloredImg: '../assets/images/food/salat.svg',
-            maskedImg: '../assets/images/food/monochrome/salat.svg',
-            label: 'Все виды салата',
-          },
-          {
-            coloredImg: '../assets/images/food/apple.svg',
-            maskedImg: '../assets/images/food/monochrome/apple.svg',
-            label: 'Сладкие ягоды и фрукты',
-          },
-          {
-            coloredImg: '../assets/images/food/sverchok.svg',
-            maskedImg: '../assets/images/food/monochrome/sverchok.svg',
-            label: 'Сверчок, саранча',
-          },
-        ],
+        types: getFoodTypes([8, 2, 9, 4, 5, 6, 7]),
       },
     },
   },
@@ -182,6 +108,44 @@ export const reptiles = [
     testNameColor: '#035997',
     testDescription: `Красноухая черепаха самое популярное домашнее земноводное во всем мире, поэтому она стала самой продаваемой в конце XX века. Этот вид является родным для южной части Соединенных Штатов и северной Мексики. Однако он постепенно стал распространяется в другие регионы, из-за отказа людей содержать ее как домашнее животное и выбрасывания в местные водоемы.`,
     description: `Пресноводная черепашка небольшого размера, из которой получится чудесный питомец. Требует небольшой террариум с пресной водой и сухим местом, на которое может выползти, чтобы погреться. Маленькая черепаха требует ежедневного кормления, взрослую можно кормить раз 2-3 дня. Поскольку эти всеядные зверушки довольно неопрятно едят, их лучше кормить в отдельном загончике.`,
+    mainBackground: '../assets/images/water_dragon_bg.png',
+    infoBackground: '../assets/images/tortoise_info_bg.jpg',
+    fullDescription: {
+      mainImg: '../assets/images/tortoise_main_icon.svg',
+      areaImg: '../assets/images/tortoise_area.png',
+      maintenanceImg: '../assets/images/tortoise_maintenance.svg',
+      foodImg: '../assets/images/tortoise_food.svg',
+      natureAge: '20-30 лет',
+      homeAge: '25-40 лет',
+      weight: '800-1200 гр',
+      foodType: 'Всеядная',
+      tailLength: '3 - 5 см',
+      bodyLength: '26 - 30 см',
+      tailColor: '#21A36C',
+      bodyColor: '#035997',
+      areaDescription: `Родом красноухая пресноводная черепаха из Северной Америки, особенно часто встречается она вдоль течения реки Миссисипи до впадения ее в Мексиканский залив. Живет она в теплом климате, в южных штатах США, от Колорадо до Флориды. Но, популярность ее велика и сейчас она часто встречается в природе по всему миру, зачастую создавая угрозу местной фауне.
+        <br/><br/>
+      В природной среде обитания ей нужны такие условия: пресная вода, места для того чтобы погреться, густая растительность и для гнезда. Обычно это озера, пруды, болота, затоки. Водоемы предпочитает с теплой водой и слабым течением, обязательно с местами над поверхностью воды на которые она будет вылезать погреться. Зачастую <br/>в таких местах они прямо лежат друг на друге. Дно в таких местах, как правило, песчаное либо заиленное.`,
+      terrariumDescription: `Просторный вертикальный террариум. <br/>Для одной особи — 60×45×30 см`,
+      lightDescription: `Лампа ультрафиолетовая для водных черепах с UVB 10%.<br/>
+      Световой день составляет 10-12 часов`,
+      temperatureDescription: `<b>Дневная температура</b> на берегу — <br/>от +28°C до +35°C`,
+      nightTemperatureDescription: `<b>Температура воды</b> в аквариуме с черепахой должна быть от +22°C до +28°C <br/>и не опускаться ниже +20°C`,
+      humidity:
+        'Воды должно быть столько, чтобы черепаха могла в ней свободно переворачиваться, <br/>то есть больше чем ширина ее панциря',
+      priming:
+        'Нужна искусственная суша или островок, <br>на который черепаха будет выползать и греться',
+      difficulty: 2,
+      food: {
+        descriptions: [
+          `Еду нужно давать один раз в день, но не более. Также, в аквариуме должны быть разные водоросли и любые другие растения, которые являются съедобными для черепах.`,
+          `Взрослые черепахи питаются пищей <br/>раз в два или три дня и половину их рациона обязательно должна составлять растительность.`,
+          `Количество даваемого корма определяется исходя из размера черепахи. Для малышей норма – два-три кусочка по 1 см³, а для черепах повзрослее – два-три куска в несколько раз больше по размеру.`,
+          `Нужно следить за тем, чтобы корм был подходящей комнатной температуры <br/>и обязательно сырой консистенции. Важно помнить о том, что молодые черепахи – это, прежде всего, хищники. Их основной вид корма – это рыба.`,
+        ],
+        types: getFoodTypes([8, 10, 9, 4, 5, 11, 7]),
+      },
+    },
   },
   {
     id: 4,
@@ -192,6 +156,8 @@ export const reptiles = [
     testDescription: `Хамелеоны — удивительные существа. Они имеют уникальное строение глаз, которое позволяет им вращаться вне зависимости друг от друга. Цепкие сдвоенные пальцы обеспечивают крепкий хват, они отлично перемещаются по веткам и лианам, а хвост служит пятой лапой — хамелеон может с легкостью удерживать свой вес на одном хвосте. Их язык превышает длину тела в 1.5 раза, они самые молниеносные охотники, при этом сами по себе хамелеоны довольно медлительны. Это прекрасные питомцы, которые обожают сидеть на руках.`,
     area: 'Африка',
     description: `Хамелеон рекомендован опытным заводчикам рептилий из-за своего трепетного нрава. Они умеют менять цвета, и у них весьма необычный внешний облик. Самыми популярными разновидностями хамелеонов для содержания дома считаются пантерный, йеменский и Джексона. Требуют просторного вольера, питаются мухами, кузнечиками, фруктами и ягодами.`,
+    mainBackground: '../assets/images/water_dragon_bg.png',
+    infoBackground: '../assets/images/water_dragon_info_bg.png',
   },
   {
     id: 5,
@@ -203,6 +169,8 @@ export const reptiles = [
     testDescription: `Маисовый полоз — это североамериканская неядовитая змея, которая относится к семейству ужеобразных. Рептилия не только не опасна для человека, но и повсеместно используется в роли домашнего животного. Это тихие и красивые питомцы, которые точно не заставят вас скучать. 
     Что касается отношения к человеку, то эта змея не опасна не только потому, что не выделяет яд, но и по той причине, что она практически никогда не кусается, как и дикие ужи.`,
     description: `Спокойная, неприхотливая, яркая змея, рекомендованная тем, кто решил завести первую в своей жизни ручную рептилию. Нрав у маисового полоза умеренный, змея неядовитая, её размер во взрослом виде — от 1,2 до 1,8 метров. Она питается свежими мышками 1 или 2 раза в неделю и живёт в тёплом террариуме, имитирующем климат родной Южной Америки. Срок жизни — до 23 лет.`,
+    mainBackground: '../assets/images/water_dragon_bg.png',
+    infoBackground: '../assets/images/water_dragon_info_bg.png',
   },
   {
     id: 6,
@@ -214,6 +182,8 @@ export const reptiles = [
     testDescription: `Королевский питон давно завоевал любовь террариумистов. Это тихие и красивые питомцы, которые точно не заставят вас скучать. Несмотря на свою длину и большой вес, змея подкупает спокойным нравом, удобством содержания и красотой. При правильном уходе такой питомец проживет 20-30 лет. 
     Самки обычно крупнее самцов. В своем виде питон один из самых маленьких — его длина редко превышает отметку в полтора метра.`,
     description: `Несмотря на название, королевский питон — самый маленький из всех питонов; это выведенный в неволе вид. Взрослая особь достигает в длину 1,2 м, иногда бывает чуть длиннее. Своё второе название «шаровидный» питон получил из-за привычки сворачиваться в клубок от испуга. Питается живыми грызунами раз в 1-2 недели. Неприхотлив, спокойно живёт в тёплом террариуме.`,
+    mainBackground: '../assets/images/water_dragon_bg.png',
+    infoBackground: '../assets/images/water_dragon_info_bg.png',
   },
   {
     id: 7,
@@ -226,6 +196,8 @@ export const reptiles = [
     <br />Животное небольшое, около 20 см в длину. Тело покрыто мелкой чешуей, на которой тут и там выделяются пупырышки. Окрас имеет много вариантов.
     <br />Эти гекконы ведут ночной образ жизни.`,
     description: `Яркий геккон до 28 см в длину и весящий до 65 г. Эта ящерка отличается ночным образом жизни, питается кузнечиками и пауками, нетребовательна в уходе и не нуждается в большом вольере. Эублефар неагрессивен, но с ним нужно быть аккуратнее — его хвост легко ломается. При желании можно купить парочку — самца и самку, хотя гекконы прекрасно чувствуют себя в одиночестве.`,
+    mainBackground: '../assets/images/water_dragon_bg.png',
+    infoBackground: '../assets/images/water_dragon_info_bg.png',
   },
   {
     id: 8,
@@ -237,6 +209,8 @@ export const reptiles = [
     testDescription: `Бананоеды — ручные гекконы, которых можно не кормить живыми насекомыми. В природе питаются насекомыми и перезрелыми фруктами, но в домашних условиях хорошо приучаются к специализированным кормам для рептилий.
     <br/>Реснитчатый — некрупный геккон до 12-15 см. Самый распространенный вид, который выбирают в качестве домашнего питомца. Имеет примечательные выросты вокруг глаз, за которые и получил свое название «реснитчатый», поскольку они немного напоминают ресницы.`,
     description: `Реснитчатые бананоеды обладатели самой привлекательной внешности. Геккон имеет примечательные выросты вокруг глаз, которые напоминают реснички. Для новичков это идеальная рептилия, он спокойный и ручной, а еще в рационе реснитчатого бананоеда можно полностью исключить живых насекомых, что не мало важно при выборе питомца для многих начинающих террариумистов.`,
+    mainBackground: '../assets/images/water_dragon_bg.png',
+    infoBackground: '../assets/images/water_dragon_info_bg.png',
   },
 ];
 
@@ -454,3 +428,95 @@ export const questions = [
     ],
   },
 ];
+
+function getFoodTypes(ids) {
+  const foodTypes = [
+    {
+      id: 1,
+      coloredImg: '../assets/images/food/taracan.svg',
+      maskedImg: '../assets/images/food/monochrome/taracan.svg',
+      label: 'Туркменский таракан, Мадакаскарский таракан',
+    },
+    {
+      id: 2,
+      coloredImg: '../assets/images/food/zoofobas.svg',
+      maskedImg: '../assets/images/food/monochrome/zoofobas.svg',
+      label: 'Зофобас, червь мучной',
+    },
+    {
+      id: 3,
+      coloredImg: '../assets/images/food/oduvanchik.svg',
+      maskedImg: '../assets/images/food/monochrome/oduvanchik.svg',
+      label: 'Одуванчик, клевер, спорыш и другие сорные травы',
+    },
+    {
+      id: 4,
+      coloredImg: '../assets/images/food/brazhnik.svg',
+      maskedImg: '../assets/images/food/monochrome/brazhnik.svg',
+      label: 'Гусеница табачного бражника',
+    },
+    {
+      id: 5,
+      coloredImg: '../assets/images/food/salat.svg',
+      maskedImg: '../assets/images/food/monochrome/salat.svg',
+      label: 'Все виды салата',
+    },
+    {
+      id: 6,
+      coloredImg: '../assets/images/food/apple.svg',
+      maskedImg: '../assets/images/food/monochrome/apple.svg',
+      label: 'Сладкие ягоды и фрукты',
+    },
+    {
+      id: 7,
+      coloredImg: '../assets/images/food/sverchok.svg',
+      maskedImg: '../assets/images/food/monochrome/sverchok.svg',
+      label: 'Сверчок, саранча',
+    },
+    {
+      id: 8,
+      coloredImg: '../assets/images/food/fish.svg',
+      maskedImg: '../assets/images/food/monochrome/fish.svg',
+      label: 'Мелкая рыба',
+    },
+    {
+      id: 9,
+      coloredImg: '../assets/images/food/mouse.svg',
+      maskedImg: '../assets/images/food/monochrome/mouse.svg',
+      label: 'Мыши',
+    },
+    {
+      id: 10,
+      coloredImg: '../assets/images/food/ulitka.svg',
+      maskedImg: '../assets/images/food/monochrome/ulitka.svg',
+      label: 'Маленькие улитки, моллюски и  кальмары',
+    },
+    {
+      id: 11,
+      coloredImg: '../assets/images/food/sea_salat.svg',
+      maskedImg: '../assets/images/food/monochrome/sea_salat.svg',
+      label: 'Водяные растения: ряска, гиацинт и остальные',
+    },
+    {
+      id: 12,
+      coloredImg: '../assets/images/food/hen.svg',
+      maskedImg: '../assets/images/food/monochrome/hen.svg',
+      label: 'Цыплята, перепелята',
+    },
+    {
+      id: 13,
+      coloredImg: '../assets/images/food/krisa.svg',
+      maskedImg: '../assets/images/food/monochrome/krisa.svg',
+      label: 'Крысы',
+    },
+    {
+      id: 14,
+      coloredImg: '../assets/images/food/banka.svg',
+      maskedImg: '../assets/images/food/monochrome/banka.svg',
+      label: 'Специальные сбалансированные фруктовые пюре',
+    },
+  ];
+  return foodTypes
+    .filter((t) => ids.indexOf(t.id) > -1)
+    .sort((a, b) => ids.indexOf(a.id) - ids.indexOf(b.id));
+}
