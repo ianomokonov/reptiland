@@ -1,4 +1,4 @@
-@import './adaptive.css';
+@import "./adaptive.css";
 
 body,
 html {
@@ -20,7 +20,7 @@ body {
 .main-menu {
   position: fixed;
   top: 0;
-  width: calc(92% - 164px) !important;
+  width: calc(92% - 164px);
   background-color: #fff;
   z-index: 100;
 }
@@ -304,30 +304,34 @@ body {
 
 .fourth-section__food-image:nth-of-type(3) {
   bottom: calc(50% + 60px);
-  left: calc(50% + 150px);
+  right: calc(50% + 150px);
 }
 
 .fourth-section__food-image:nth-of-type(4) {
-  top: calc(50% - 20px);
+  bottom: calc(50% + 60px);
   left: calc(50% + 150px);
 }
 
 .fourth-section__food-image:nth-of-type(5) {
-  top: calc(50% + 150px);
-  left: calc(50% + 20px);
+  top: calc(50% - 20px);
+  right: calc(50% + 150px);
 }
 
 .fourth-section__food-image:nth-of-type(6) {
+  top: calc(50% - 20px);
+  left: calc(50% + 150px);
+}
+
+.fourth-section__food-image:nth-of-type(7) {
   top: calc(50% + 150px);
   right: calc(50% + 20px);
 }
 
-.fourth-section__food-image:nth-of-type(7) {
-  bottom: calc(50% + 60px);
-  right: calc(50% + 150px);
+.fourth-section__food-image:nth-of-type(8) {
+  top: calc(50% + 150px);
+  left: calc(50% + 20px);
 }
 
-.fourth-section__food-image:nth-of-type(8) {
-  top: calc(50% - 20px);
-  right: calc(50% + 150px);
+.fourth-section__slider {
+  display: none;
 }

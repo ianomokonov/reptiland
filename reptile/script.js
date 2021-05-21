@@ -1,13 +1,15 @@
-import { reptiles } from '../reptiles/data.js';
+import { reptiles } from "../reptiles/data.js";
 
 let activeIndex = 0;
 let scrolling = false;
 const reptile = reptiles.find(
-  (r) => r.id == new URL(document.location).searchParams.get('id')
+  (r) => r.id == new URL(document.location).searchParams.get("id")
 );
 
+let activeFoodIndex = reptile.fullDescription.food.types[0].id;
+
 document.addEventListener(
-  'wheel',
+  "wheel",
   (e) => {
     e.preventDefault();
     if (scrolling) {
@@ -36,7 +38,7 @@ document.addEventListener(
 );
 
 const onFoodEnter = ({ target }) => {
-  const colored = target.closest('[data-colored]');
+  const colored = target.closest("[data-colored]");
   if (!colored) {
     return;
   }
@@ -45,7 +47,7 @@ const onFoodEnter = ({ target }) => {
 };
 
 const onFoodLeave = ({ target }) => {
-  const masked = target.closest('[data-masked]');
+  const masked = target.closest("[data-masked]");
   if (!masked) {
     return;
   }
@@ -55,17 +57,17 @@ const onFoodLeave = ({ target }) => {
 
 if (reptile) {
   document.body.style.setProperty(
-    'background-image',
+    "background-image",
     `url(${reptile.infoBackground})`,
-    'important'
+    "important"
   );
 
   setData(reptile);
 }
 
 document
-  .querySelector('.fourth-section__food')
-  .addEventListener('mouseenter', ({ target }) => {
+  .querySelector(".fourth-section__food")
+  .addEventListener("mouseenter", ({ target }) => {
     console.log(target);
   });
 
@@ -80,7 +82,7 @@ function setData(reptile) {
 }
 
 function setFirstSection(reptile) {
-  const section = document.querySelector('.first-section');
+  const section = document.querySelector(".first-section");
   section.innerHTML = `
     <h1 class="main-header main-header_centered">${reptile.name}</h1>
     <div class="row">
@@ -132,7 +134,7 @@ function setFirstSection(reptile) {
 }
 
 function setSecondSection(reptile) {
-  const section = document.querySelector('.second-section');
+  const section = document.querySelector(".second-section");
   section.innerHTML = `
     <div class="row">
     <div class="col-xl-6 col-11 d-flex align-items-center justify-content-center">
@@ -153,11 +155,11 @@ function setSecondSection(reptile) {
 }
 
 function setThirdSection(reptile) {
-  const section = document.querySelector('.third-section');
+  const section = document.querySelector(".third-section");
   section.innerHTML = `
   <div class="third-section__header">Содержание</div>
   <div class="row">
-    <div class="col-xl-6 col-sm-9 col-12 third-section__info">
+    <div class="col-xl-6 col-sm-10 col-12 third-section__info">
       <div class="third-section__info-item">
         <img src="../assets/images/terrarium.png" alt="" />
         <div class="line"></div>
@@ -216,7 +218,7 @@ function setThirdSection(reptile) {
 }
 
 function setFourthSection(reptile) {
-  const section = document.querySelector('.fourth-section');
+  const section = document.querySelector(".fourth-section");
   section.innerHTML = `
   <div class="fourth-section__header">Питание</div>
   <div class="fourth-section__descriptions">
@@ -239,21 +241,24 @@ function setFourthSection(reptile) {
             />
       ${getFood(reptile.fullDescription.food.types)}
     </div>
+    <div class="fourth-section__slider">
+        ${getSlider(reptile.fullDescription.food.types)}
+    </div>
   </div>
         `;
 
-  section.querySelectorAll('[data-colored]').forEach((elem) => {
-    elem.addEventListener('mouseenter', onFoodEnter);
-    elem.addEventListener('mouseleave', onFoodLeave);
+  section.querySelectorAll("[data-colored]").forEach((elem) => {
+    elem.addEventListener("mouseenter", onFoodEnter);
+    elem.addEventListener("mouseleave", onFoodLeave);
   });
 }
 
 function getDifficulty(difficulty) {
-  let result = '';
+  let result = "";
   console.log(difficulty);
   for (let i = 0; i < 5; i++) {
     result += `<div class="third-section_dificulty-point ${
-      i <= difficulty - 1 ? 'third-section_dificulty-point_filled' : ''
+      i <= difficulty - 1 ? "third-section_dificulty-point_filled" : ""
     }"></div>`;
   }
 
@@ -262,12 +267,12 @@ function getDifficulty(difficulty) {
 
 function getDifficultyColor(difficulty) {
   if (difficulty < 3) {
-    return 'third-section_dificulty_green';
+    return "third-section_dificulty_green";
   }
   if (difficulty == 3) {
-    return 'third-section_dificulty_yellow';
+    return "third-section_dificulty_yellow";
   }
-  return 'third-section_dificulty_orange';
+  return "third-section_dificulty_orange";
 }
 
 function getFood(types) {
@@ -282,5 +287,38 @@ function getFood(types) {
     class="fourth-section__food-image"
   />`
     )
-    .join('');
+    .join("");
+}
+
+function getSlider(types) {
+  return types
+    .map(
+      (type) =>
+        `
+    <div class="${
+      type.id != activeFoodIndex ? "food-content_next" : "food-content_active"
+    }">
+      <img class="food-content_arrow" src="../assets/images/arrow_left.svg" ${goFoodBack(type.id
+      )}>
+      <div class="food-content_block">
+        <img
+        src="${type.coloredImg}"
+        data-label="${type.label}"
+        class="fourth-section__food-image"
+        />
+        <span>${type.label}</span>
+      </div>
+      <img class="food-content_arrow" src="../assets/images/arrow_right.svg">
+    </div>
+    `
+    )
+    .join("");
+}
+
+function goFoodBack(type) {
+  //?
+}
+
+function goFoodForward(type) {
+  //?
 }
