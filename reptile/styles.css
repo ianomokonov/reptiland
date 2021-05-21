@@ -2,6 +2,9 @@ body,
 html {
   min-height: 100vh;
 }
+body {
+  background-size: 500px auto;
+}
 
 .container {
   background-color: #fff;
