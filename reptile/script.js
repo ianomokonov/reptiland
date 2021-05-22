@@ -1,12 +1,39 @@
 import { reptiles } from "../reptiles/data.js";
 
 let activeIndex = 0;
+let activeFoodIndex = 0;
 let scrolling = false;
 const reptile = reptiles.find(
   (r) => r.id == new URL(document.location).searchParams.get("id")
 );
 
-let activeFoodIndex = reptile.fullDescription.food.types[0].id;
+const goBack = () => {
+  if (activeFoodIndex < 1) {
+    return;
+  }
+  const prevReptile = document.getElementById(activeFoodIndex - 1);
+  const active = document.getElementById(activeFoodIndex);
+  removeClasses(prevReptile);
+  removeClasses(active);
+  active.classList.add('food-content__block_next');
+  prevReptile.classList.add('food-content__block_active');
+  activeFoodIndex -= 1;
+  setActivePoint()
+}
+
+const goForward = () => {
+  if (activeFoodIndex > reptile.fullDescription.food.types.length - 2) {
+    return;
+  }
+  const nextReptile = document.getElementById(activeFoodIndex + 1);
+  const active = document.getElementById(activeFoodIndex);
+  removeClasses(nextReptile);
+  removeClasses(active);
+  active.classList.add('food-content__block_prev');
+  nextReptile.classList.add('food-content__block_active');
+  activeFoodIndex += 1;
+  setActivePoint()
+}
 
 document.addEventListener(
   "wheel",
@@ -36,6 +63,12 @@ document.addEventListener(
   },
   { passive: false }
 );
+
+function removeClasses(elem) {
+  elem.classList.remove('food-content__block_next');
+  elem.classList.remove('food-content__block_prev');
+  elem.classList.remove('food-content__block_active');
+}
 
 const onFoodEnter = ({ target }) => {
   const colored = target.closest("[data-colored]");
@@ -146,9 +179,9 @@ function setSecondSection(reptile) {
     </div>
     <div class="col-xl-6 col-11 d-flex flex-column justify-content-center">
       <div class="second-section__header">Место обитания</div>
-      <p class="second-section__description">
+      <div class="second-section__description">
         ${reptile.fullDescription.areaDescription}
-      </p>
+      </div>
     </div>
   </div>
       `;
@@ -223,16 +256,16 @@ function setFourthSection(reptile) {
   <div class="fourth-section__header">Питание</div>
   <div class="fourth-section__descriptions">
     <div class="fourth-section__description">
-    ${reptile.fullDescription.food.descriptions[0]}
+    ${getFoodDescriptions()[0]  || ''}
+    </div>
+    <div class="fourth-section__description ${getSecondBlockPosition(getFoodDescriptions()[1])}">
+    ${getFoodDescriptions()[1]  || ''}
     </div>
     <div class="fourth-section__description">
-    ${reptile.fullDescription.food.descriptions[1]}
+    ${getFoodDescriptions()[2]  || ''}
     </div>
     <div class="fourth-section__description">
-    ${reptile.fullDescription.food.descriptions[2]}
-    </div>
-    <div class="fourth-section__description">
-    ${reptile.fullDescription.food.descriptions[3]}
+    ${getFoodDescriptions()[3] || ''}
     </div>
     <div class="fourth-section__food">
     <img
@@ -242,15 +275,38 @@ function setFourthSection(reptile) {
       ${getFood(reptile.fullDescription.food.types)}
     </div>
     <div class="fourth-section__slider">
-        ${getSlider(reptile.fullDescription.food.types)}
+        <div class="fourth-section__slides">
+          <img class="food-content__arrow food-content__arrow_prev" src="../assets/images/arrow_left.svg">
+          ${getSlider(reptile.fullDescription.food.types)}
+          <img class="food-content__arrow food-content__arrow_next" src="../assets/images/arrow_right.svg">
+        </div>
+        <div class="steps">
+          ${getSliderButtons(reptile.fullDescription.food.types)}
+        </div>
     </div>
   </div>
         `;
 
+  section.querySelector(".food-content__arrow_prev").addEventListener('click', goBack);
+  section.querySelector(".food-content__arrow_next").addEventListener('click', goForward);
   section.querySelectorAll("[data-colored]").forEach((elem) => {
     elem.addEventListener("mouseenter", onFoodEnter);
     elem.addEventListener("mouseleave", onFoodLeave);
   });
+}
+
+function getSecondBlockPosition(text) {
+  // if (text.indexOf('Кормить:') > -1 || document.documentElement.clientWidth < 576) {
+    return 'fourth-section__description_top';
+  // }
+  // return '';
+}
+
+function getFoodDescriptions() {
+  if (document.documentElement.clientWidth < 576) {
+    return reptile.fullDescription.food.descriptionsSm || reptile.fullDescription.food.descriptions;
+  }
+  return reptile.fullDescription.food.descriptions;
 }
 
 function getDifficulty(difficulty) {
@@ -293,32 +349,45 @@ function getFood(types) {
 function getSlider(types) {
   return types
     .map(
-      (type) =>
+      (type, index) =>
         `
-    <div class="${
-      type.id != activeFoodIndex ? "food-content_next" : "food-content_active"
-    }">
-      <img class="food-content_arrow" src="../assets/images/arrow_left.svg" ${goFoodBack(type.id
-      )}>
-      <div class="food-content_block">
+    <div class="food-content__block ${
+      getDirection(index)
+    }" id="${index}">
         <img
         src="${type.coloredImg}"
         data-label="${type.label}"
         class="fourth-section__food-image"
         />
         <span>${type.label}</span>
-      </div>
-      <img class="food-content_arrow" src="../assets/images/arrow_right.svg">
     </div>
+    
     `
     )
     .join("");
 }
 
-function goFoodBack(type) {
-  //?
+function getDirection(index) {
+  if (index < activeFoodIndex) {
+    return 'food-content__block_prev';
+  }
+  if (index > activeFoodIndex) {
+    return 'food-content__block_next';
+  }
+  return 'food-content__block_active';
 }
 
-function goFoodForward(type) {
-  //?
+function getSliderButtons(types) {
+  return types
+    .map(
+      (type, index) =>
+        `
+      <div class='steps__point ${activeFoodIndex == index ? "steps__point_active" : ""}'></div>
+    `
+    )
+    .join("");
+}
+
+function setActivePoint() {
+  document.querySelector(".steps").innerHTML = getSliderButtons(reptile.fullDescription.food.types);
 }
