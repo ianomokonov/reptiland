@@ -233,7 +233,7 @@
   }
 
   .second-section__description {
-    font-size: 14px !important;
+    font-size: 13.5px !important;
     line-height: 21px !important;
   }
 
@@ -258,7 +258,7 @@
   }
 
   .third-section__info-item-description {
-    font-size: 14px !important;
+    font-size: 13px !important;
   }
 
   .third-section_dificulty {
@@ -295,7 +295,7 @@
 
   .fourth-section__description:nth-of-type(2).fourth-section__description_top {
     left: 0 !important;
-    top: 47px !important;
+    top: 30px !important;
     width: 200px !important;
   }
 
