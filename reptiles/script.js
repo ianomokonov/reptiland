@@ -9,15 +9,18 @@ showAll();
 function show(index) {
   const reptile = document.getElementById(index);
   const active = document.getElementById(activeIndex);
+  const bg = document.querySelector('.bg');
   removeClasses(reptile);
   removeClasses(active);
   if (activeIndex > index) {
     active.classList.add('page-content_next');
+    console.log(bg.style.transform);
+    bg.style.transform = `translateY(${-index * 1080}px)`;
   } else {
     active.classList.add('page-content_prev');
+    bg.style.transform = `translateY(${-index * 1080}px)`;
   }
   reptile.classList.add('page-content_active');
-  document.documentElement.style.backgroundImage = `url(${reptiles[index].mainBackground})`;
   activeIndex = index;
   setPages(activeIndex);
   if (window.innerWidth < 500) {
