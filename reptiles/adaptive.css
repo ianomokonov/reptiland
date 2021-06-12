@@ -41,9 +41,8 @@
   .page-content {
     padding: 0 32px;
     justify-content: flex-start !important;
-    padding-top: 30px;
-    overflow-x: scroll !important;
     height: calc(100vh - 48px) !important;
+    overflow: hidden;
   }
 
   .page-content__public-name {
@@ -72,7 +71,9 @@
   }
 
   .page-content_rowed {
+    transition: 0s !important;
     width: calc(100% - 64px) !important;
+    padding-top: 10px;
     position: static !important;
     width: 100% !important;
     opacity: 1 !important;
