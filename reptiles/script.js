@@ -17,6 +17,7 @@ function show(index) {
     active.classList.add('page-content_prev');
   }
   reptile.classList.add('page-content_active');
+  document.documentElement.style.backgroundImage = `url(${reptiles[index].mainBackground})`;
   activeIndex = index;
   setPages(activeIndex);
 }
