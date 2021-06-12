@@ -50,6 +50,7 @@
   }
   .main-menu__menu-item {
     color: white !important;
+    background: transparent !important;
   }
   .main-menu__logo:not(.main-menu__logo_sm) {
     display: none;

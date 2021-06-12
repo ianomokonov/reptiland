@@ -20,7 +20,9 @@ body {
 .main-menu {
   position: fixed;
   top: 0;
-  width: calc(92% - 164px);
+  max-width: unset !important;
+  justify-content: center;
+  display: flex;
   background-color: #fff;
   z-index: 100;
 }
@@ -172,7 +174,7 @@ body {
 }
 
 .third-section__info-item:not(:last-child) {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .third-section__info-item .line {
