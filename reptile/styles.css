@@ -21,10 +21,14 @@ body {
   position: fixed;
   top: 0;
   max-width: unset !important;
-  justify-content: center;
+  width: calc(91vw - 1px);
+  left: 4vw;
+  justify-content: space-between;
   display: flex;
   background-color: #fff;
   z-index: 100;
+  padding-left: 128px;
+  padding-right: 70px;
 }
 
 .content-section {

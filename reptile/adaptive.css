@@ -296,7 +296,7 @@
   }
 
   .fourth-section__food-image {
-    display: none;
+    display: none !important;
   }
 
   .fourth-section__description {
