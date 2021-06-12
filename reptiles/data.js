@@ -308,7 +308,7 @@ export const reptiles = [
       humidity:
         "Не допустима избыточная влажность. Нужна повышенная влажность во время линьки питомца",
       priming:
-        "На дно насыпается древесный субстрат. Не стоит использовать кокосовый субстрат или стружку, он предназначен для высокой влажности, которая питону не нужна, а в сухом состоянии он сильно пылит, забивая дыхательные пути змеи",
+        "На дно насыпается древесный субстрат. Не стоит класть кокосовый субстрат, он нужен для высокой влажности, она питону не нужна, а в сухом состоянии субстрат пылит",
       difficulty: 2,
       food: {
         descriptionsSm: [
@@ -675,7 +675,8 @@ function getFoodTypes(ids) {
       id: 1,
       coloredImg: "../assets/images/food/taracan.svg",
       maskedImg: "../assets/images/food/monochrome/taracan.svg",
-      label: "Мадакаскарский и туркменский тараканы",
+      label: "Туркменский таракан, Мадакаскарский таракан",
+      styles: "min-width: 250px"
     },
     {
       id: 2,
@@ -688,18 +689,21 @@ function getFoodTypes(ids) {
       coloredImg: "../assets/images/food/oduvanchik.svg",
       maskedImg: "../assets/images/food/monochrome/oduvanchik.svg",
       label: "Одуванчик, клевер, спорыш и другие сорные травы",
+      styles: "min-width: 210px"
     },
     {
       id: 4,
       coloredImg: "../assets/images/food/brazhnik.svg",
       maskedImg: "../assets/images/food/monochrome/brazhnik.svg",
       label: "Гусеница табачного бражника",
+      styles: "min-width: 200px"
     },
     {
       id: 5,
       coloredImg: "../assets/images/food/salat.svg",
       maskedImg: "../assets/images/food/monochrome/salat.svg",
       label: "Все виды салата",
+      styles: "min-width: 170px"
     },
     {
       id: 6,
@@ -712,6 +716,7 @@ function getFoodTypes(ids) {
       coloredImg: "../assets/images/food/sverchok.svg",
       maskedImg: "../assets/images/food/monochrome/sverchok.svg",
       label: "Сверчок, саранча",
+      styles: "min-width: 200px"
     },
     {
       id: 8,

@@ -17,8 +17,15 @@ function show(index) {
     active.classList.add('page-content_prev');
   }
   reptile.classList.add('page-content_active');
+  document.documentElement.style.backgroundImage = `url(${reptiles[index].mainBackground})`;
   activeIndex = index;
   setPages(activeIndex);
+  if (window.innerWidth < 500) {
+    console.dir(reptile);
+    document
+      .querySelector(`.page-content_active`)
+      .scrollIntoView({ block: 'center', behavior: 'smooth' });
+  }
 }
 
 function removeClasses(elem) {
@@ -77,7 +84,8 @@ function getHiddenClass(index, activeIndex) {
   return '';
 }
 
-const scroll = ({ deltaY }) => {
+const scroll = (event) => {
+  const { deltaY } = event;
   if (scrolling) {
     return;
   }
@@ -96,14 +104,26 @@ const scroll = ({ deltaY }) => {
   }
 };
 
-// let start = 0;
+let start = 0;
 
-document.addEventListener('wheel', scroll);
-// document.addEventListener('touchstart', (e) => {
-//   start = e.changedTouches[0]?.clientY;
-// });
+document.addEventListener('wheel', scroll, { passive: false });
+document.addEventListener(
+  'touchstart',
+  (e) => {
+    start = e.changedTouches[0]?.clientY;
+  },
+  { passive: false }
+);
 
-// document.addEventListener('touchend', (e) => {
-//   const deltaY = start - e.changedTouches[0]?.clientY;
-//   scroll({ deltaY });
-// });
+document.addEventListener(
+  'touchend',
+  (e) => {
+    const deltaY = start - e.changedTouches[0]?.clientY;
+    if (Math.abs(deltaY) > 10) {
+      e.preventDefault();
+      e.stopPropagation();
+      scroll({ deltaY });
+    }
+  },
+  { passive: false }
+);
