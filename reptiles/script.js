@@ -1,10 +1,16 @@
 import { reptiles } from './data.js';
 
-const field = document.querySelector('.page-content');
-const pages = document.querySelector('.page-content__page-points');
+let field = document.querySelector('.page-content');
+let pages = document.querySelector('.page-content__page-points');
 let activeIndex = 0;
 let scrolling = false;
-showAll();
+window.document.addEventListener('DOMContentLoaded', function () {
+  // Аналог $(document).ready(function(){
+  field = document.querySelector('.page-content');
+  pages = document.querySelector('.page-content__page-points');
+  showAll();
+  show(0);
+});
 
 function show(index) {
   const reptile = document.getElementById(index);
@@ -12,19 +18,20 @@ function show(index) {
   const bg = document.querySelector('.bg');
   removeClasses(reptile);
   removeClasses(active);
+  console.log(window.innerHeight);
   if (activeIndex > index) {
     active.classList.add('page-content_next');
-    console.log(bg.style.transform);
-    bg.style.transform = `translateY(${-index * 1080}px)`;
-  } else {
+    bg.style.transform = `translateY(${
+      -index * (window.innerWidth > 768 ? 1080 : 1024)
+    }px)`;
+  } else if (activeIndex < index) {
     active.classList.add('page-content_prev');
-    bg.style.transform = `translateY(${-index * 1080}px)`;
+    bg.style.transform = `translateY(${-index * (window.innerWidth > 768 ? 1080 : 1024)}px)`;
   }
   reptile.classList.add('page-content_active');
   activeIndex = index;
   setPages(activeIndex);
-  if (window.innerWidth < 500) {
-    console.dir(reptile);
+  if (window.innerWidth < 768) {
     document
       .querySelector(`.page-content_active`)
       .scrollIntoView({ block: 'center', behavior: 'smooth' });

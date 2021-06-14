@@ -13,7 +13,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1490px) {
   .container {
     padding: 0px !important;
   }
@@ -122,6 +122,10 @@
     margin-bottom: 0px !important;
   }
 
+  .fourth-section{
+    padding-top: 90px !important;
+  }
+
   .fourth-section__food {
     min-height: 58vh !important;
   }
@@ -138,6 +142,10 @@
     width: 100% !important;
     margin-bottom: 20px;
     font-size: 14px !important;
+  }
+
+  .fourth-section__description:first-child{
+    padding-top: 30px;
   }
 
   /* .fourth-section__description:not(.fourth-section__description_top):not(:nth-of-type(1)) {
@@ -166,12 +174,77 @@
   .fourth-section__description:nth-of-type(4) {
     order: 5;
   }
+
+  .fourth-section__food-image:nth-of-type(1) div {
+    bottom: 90%;
+  }
+  
+  .fourth-section__food-image:nth-of-type(2) div,
+  .fourth-section__food-image:nth-of-type(3) div {
+    bottom: 90%;
+    left: unset !important;
+    right: unset !important;
+  }
+  
+  .fourth-section__food-image:nth-of-type(4) div,
+  .fourth-section__food-image:nth-of-type(5) div {
+    top: 90%;
+    left: unset !important;
+    right: unset !important;
+  }
+  
+  .fourth-section__food-image:nth-of-type(6) div,
+  .fourth-section__food-image:nth-of-type(7) div {
+    top: 90%;
+    left: unset !important;
+    right: unset !important;
+  }
+  
+  .fourth-section__food-image:nth-of-type(1) div:after {
+    top: calc(100% - 1px);
+    border-top: 14px solid #fff;
+  }
+  
+  .fourth-section__food-image:nth-of-type(2) div:after,
+  .fourth-section__food-image:nth-of-type(3) div:after {
+    top: calc(100% - 1px);
+    border-top: 14px solid #fff;
+    
+    left: unset !important;
+    border-left-color: transparent !important;
+    right: unset !important;
+    border-right-color: transparent !important;
+  }
+  
+  .fourth-section__food-image:nth-of-type(4) div:after,
+  .fourth-section__food-image:nth-of-type(5) div:after {
+    bottom: calc(100% - 1px);
+    border-bottom: 14px solid #fff;
+    left: unset !important;
+    border-left-color: transparent !important;
+    right: unset !important;
+    border-right-color: transparent !important;
+  }
+  
+  .fourth-section__food-image:nth-of-type(6) div:after,
+  .fourth-section__food-image:nth-of-type(7) div:after {
+    bottom: calc(100% - 1px);
+    border-bottom: 14px solid #fff;
+    left: unset !important;
+    border-left-color: transparent !important;
+    right: unset !important;
+    border-right-color: transparent !important;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     max-width: 100% !important;
     padding: 0px !important;
+  }
+  .main-menu {
+    left: 0 !important;
+    padding-left: 70px !important;
   }
 
   .content-section {
@@ -355,6 +428,7 @@
     width: 90px;
     height: 90px;
     margin-right: 10px;
+    bottom: 0 !important;
   }
 
   .food-content__block {

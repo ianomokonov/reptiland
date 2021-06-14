@@ -1,7 +1,4 @@
 @media (max-width: 1200px) {
-  .bg{
-    display: none;
-  }
   .page-content .page-content__page-points {
     right: unset;
     left: calc(100% + 12px);
@@ -9,6 +6,7 @@
 
   .page-content_rowed {
     flex-direction: column;
+    padding-top: 30px;
   }
 
   .page-content__col .page-content__main-img {
@@ -31,16 +29,18 @@
 }
 
 @media (max-width: 1200px) and (min-width: 768px) {
-  html {
-    background: repeat-y url(../assets/images/tablet_bg.png) 0 0 / 100% auto !important;
+  .bg {
+    background: repeat-y url(../assets/images/reptiles_tablet_bg.png) 0 0 / 100% auto !important;
   }
-
   .page-content__col .page-content__main-img {
     max-height: 400px !important;
   }
 }
 
 @media (max-width: 767px) {
+  .bg {
+    display: none;
+  }
   .page-content {
     padding: 0 32px;
     justify-content: flex-start !important;

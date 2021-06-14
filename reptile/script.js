@@ -55,6 +55,9 @@ const scroll = (deltaY) => {
 document.addEventListener(
   'wheel',
   (e) => {
+    if (window.innerHeight < 950) {
+      return;
+    }
     e.preventDefault();
     if (scrolling) {
       return;
@@ -71,7 +74,7 @@ document.addEventListener(
 
 let start = 0;
 
-document.addEventListener('wheel', scroll);
+// document.addEventListener('wheel', scroll);
 // document.addEventListener(
 //   'touchstart',
 //   (e) => {
@@ -104,7 +107,7 @@ const onFoodEnter = ({ target }) => {
   }
 
   colored.firstChild.src = colored.dataset.colored;
-  colored.classList.add('fourth-section__food-image_active')
+  colored.classList.add('fourth-section__food-image_active');
 };
 
 const onFoodLeave = ({ target }) => {
@@ -114,7 +117,7 @@ const onFoodLeave = ({ target }) => {
   }
 
   masked.firstChild.src = masked.dataset.masked;
-  masked.classList.remove('fourth-section__food-image_active')
+  masked.classList.remove('fourth-section__food-image_active');
 };
 
 if (reptile) {

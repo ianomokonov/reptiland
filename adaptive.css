@@ -12,8 +12,10 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
     padding-bottom: 0 !important;
-    background-color: white !important;
     color: black !important;
+  }
+  .main-menu__menu-item:hover{
+    background-color: transparent !important;
   }
 }
 
@@ -21,6 +23,7 @@
   html {
     background: none !important;
   }
+  
   .main-menu {
     background-color: #21a36c !important;
     width: 100% !important;
@@ -76,7 +79,7 @@
   .main-menu__burger {
     display: block !important;
     position: absolute;
-    left: 32px;
+    left: 16px;
     top: 14px;
   }
 
